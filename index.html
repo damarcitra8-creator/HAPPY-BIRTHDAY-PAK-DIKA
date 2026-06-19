@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selamat Ulang Tahun Pak Dika</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+background:linear-gradient(135deg,#0f4c81,#4da8ff,#ffffff);
+background-size:400% 400%;
+animation:bgMove 15s ease infinite;
+min-height:100vh;
+color:white;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.sparkle{
+position:fixed;
+width:5px;
+height:5px;
+background:white;
+border-radius:50%;
+animation:fall linear infinite;
+opacity:.8;
+}
+
+@keyframes fall{
+from{
+transform:translateY(-10vh);
+}
+to{
+transform:translateY(110vh);
+}
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:40px 20px;
+text-align:center;
+}
+
+.title{
+font-family:'Dancing Script',cursive;
+font-size:70px;
+margin-top:30px;
+text-shadow:
+0 0 10px #fff,
+0 0 20px #fff,
+0 0 40px #9fd3ff;
+animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.03);
+}
+}
+
+.subtitle{
+font-size:22px;
+margin-top:15px;
+opacity:.95;
+}
+
+.card{
+margin-top:40px;
+padding:35px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,255,255,.3);
+animation:fadeUp 2s;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(60px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.letter{
+font-size:18px;
+line-height:2;
+text-align:left;
+}
+
+.highlight{
+color:#fffacd;
+font-weight:bold;
+text-shadow:0 0 10px white;
+}
+
+.video-box{
+margin-top:40px;
+}
+
+video{
+width:100%;
+max-width:700px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(255,255,255,.5);
+}
+
+.btn{
+margin-top:35px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+background:white;
+color:#0f4c81;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+.surprise{
+display:none;
+margin-top:30px;
+font-size:25px;
+animation:pop 1s;
+}
+
+@keyframes pop{
+from{
+transform:scale(0);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.footer{
+margin-top:50px;
+font-size:20px;
+font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1 class="title">🎉 Selamat Ulang Tahun Pak Dika 🎉</h1>
+
+<p class="subtitle">
+Hari yang spesial untuk sosok yang luar biasa ✨
+</p>
+
+<div class="card">
+
+<div class="letter">
+<p>
+Yth. <span class="highlight">Pak Dika</span>,
+</p>
+
+<p>
+Di hari yang berbahagia ini, kami ingin mengucapkan
+<b>Selamat Ulang Tahun</b> untuk Bapak.
+Semoga setiap langkah yang Bapak jalani selalu diberikan
+kesehatan, kebahagiaan, keberkahan, dan kesuksesan.
+</p>
+
+<p>
+Semoga Bapak selalu diberikan umur yang panjang,
+rezeki yang melimpah, hati yang tenang,
+serta kekuatan untuk meraih segala impian dan harapan.
+</p>
+
+<p>
+Terima kasih atas segala ilmu, nasihat, dan inspirasi
+yang telah Bapak berikan kepada kami.
+Kebaikan Bapak akan selalu kami kenang dan menjadi
+motivasi untuk terus berkembang menjadi pribadi yang lebih baik.
+</p>
+
+<p>
+Semoga di usia yang baru ini,
+setiap hari membawa kebahagiaan,
+setiap langkah membawa keberhasilan,
+dan setiap doa yang dipanjatkan dapat terwujud.
+</p>
+
+<p>
+🎂 <b>Selamat Ulang Tahun Pak Dika</b> 🎂
+Semoga panjang umur, sehat selalu,
+bahagia bersama keluarga,
+dan sukses dalam segala hal.
+</p>
+</div>
+
+</div>
+
+<div class="video-box">
+<h2>📹 Kenangan Bersama Kami</h2>
+<br>
+<video controls>
+<source src="video.mp4" type="video/mp4">
+</video>
+</div>
+
+<button class="btn" onclick="surprise()">
+🎁 Klik Untuk Kejutan
+</button>
+
+<div class="surprise" id="surprise">
+🎉✨ SURPRISE PAK DIKA ✨🎉<br><br>
+🎂 Semoga Panjang Umur<br>
+💙 Sehat Selalu<br>
+🌟 Bahagia Selalu<br>
+🎓 Sukses Dalam Segala Hal<br><br>
+Kami Semua Mengucapkan<br>
+❤️ SELAMAT ULANG TAHUN ❤️
+</div>
+
+<div class="footer">
+Dari Kami Semua 💙
+</div>
+
+</div>
+
+<script>
+function surprise(){
+document.getElementById("surprise").style.display="block";
+
+for(let i=0;i<80;i++){
+let conf=document.createElement("div");
+conf.innerHTML="🎉";
+conf.style.position="fixed";
+conf.style.left=Math.random()*100+"vw";
+conf.style.top="-50px";
+conf.style.fontSize=(20+Math.random()*20)+"px";
+conf.style.animation=`jatuh ${3+Math.random()*3}s linear forwards`;
+document.body.appendChild(conf);
+
+setTimeout(()=>{
+conf.remove();
+},6000);
+}
+}
+
+for(let i=0;i<60;i++){
+let s=document.createElement("div");
+s.classList.add("sparkle");
+s.style.left=Math.random()*100+"vw";
+s.style.animationDuration=(3+Math.random()*8)+"s";
+s.style.animationDelay=Math.random()*5+"s";
+document.body.appendChild(s);
+}
+
+const style=document.createElement("style");
+style.innerHTML=`
+@keyframes jatuh{
+to{
+transform:translateY(110vh) rotate(720deg);
+}
+}`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>
